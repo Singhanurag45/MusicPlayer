@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+     
+</head>
+<body>
+  
+    <div class="container">
+        <div class="music-player">
+
+            <h2>  Music <i class="fa-solid fa-heart "  style="color:red"></i> Player</h2>
+            <nav> 
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            
+            <!-- Inside .music-player div -->
+             <img src="Laal_chunariya.png" alt="" class="song-img">
+             <h1>Laal Chunariya</h1>
+             <p>Singer - "Akull"</p>
+             
+             <audio id="song">
+                 <source src="Laal Chunariya - Akull 128 Kbps.mp3" type="audio/mpeg">
+             </audio>
+                 
+            <!-- Keep ONLY ONE progress bar -->
+            <input type="range" value="0" id="progress">
+            
+            <div style="display:flex; justify-content:space-between; margin-top: 5px; font-size: 12px; color:#333;">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+            
+            <div class="controls">
+                <div onclick="prevSong()"><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div onclick="nextSong()"><i class="fa-solid fa-forward"></i></div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
